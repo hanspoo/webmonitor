@@ -8,6 +8,11 @@
       "ios",
       "android"
     ],
+    "android": {
+      "versionCode": 1,
+      "package": "cl.welinux.webmonitor",
+    },
+
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
