@@ -16,6 +16,7 @@ import {
 import axios from 'axios';
 import { Text } from 'react-native';
 import { marcarOk, marcarError } from '../src/redux/store';
+import { CHECK_INTERVAL_SEGS } from '../src/config';
 
 const config = { headers: { Accept: 'text/html' } };
 
@@ -32,7 +33,7 @@ class Home extends React.Component {
       console.log('Notification permissions granted.');
     }
 
-    this.interval = setInterval(this.verificarServidores, 1000 * 60 * 10);
+    this.interval = setInterval(this.verificarServidores, CHECK_INTERVAL_SEGS);
   }
 
   componentWillUnmount() {
